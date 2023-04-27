@@ -1,6 +1,4 @@
-FROM ubuntu:20.04
-ENV TZ=Asia/Dubai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+FROM ubuntu:latest
 RUN apt-get update
 RUN apt-get install -y apache2
 RUN rm /var/www/html/index.html
